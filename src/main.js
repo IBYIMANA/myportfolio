@@ -12,3 +12,12 @@ document.addEventListener('DOMContentLoaded', function() {
         paragraph.style.color = 'white';
     });
 });
+document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('nav ul li a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        navLinks.forEach(link => link.classList.remove('text-blue-500'));
+        this.classList.add('text-blue-500');
+      });
+    });
+ });
